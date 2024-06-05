@@ -22,4 +22,5 @@ def kubelet:
 def kubeProxy:
     Pod has a separate network, Service is not like a conatienr, It's a virtual thing only on k8s memory'. kube-proxy is a process that runs on each node on k8s cluster, it looks for new services , proxy uses iptables and creates rule to do traffic forwarding. 
 
-
+def ReplicaController:
+    Helps to maintain a certain number of replicas.
