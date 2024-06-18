@@ -18,3 +18,20 @@ def ConfigMap:
     data:
         APP_COLOR=blue
         APP_MODE= prod
+
+
+
+    if configMapCreated and inject in pod:
+        Add the envFrom property: 
+            - configMapRef:
+                name: app-config
+
+    We can reference one value as well if needed not the whole file, for example 
+
+    if onlyOneValue:
+        valueFrom:
+            configMapKeyRef:
+                name: app-config
+                key: APP_COLOR
+
+
