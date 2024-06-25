@@ -28,3 +28,5 @@ kubectl taint node controlplane node-role.kubernetes.io/control-plane:NoSchedule
 kubectl lable node node01 color=blue
 
 kubectl run static-busybox --image=busybox --dry-run=client -o yaml --command -- sleep 1000 > test.yml
+
+kubectl config view : To check the config info
