@@ -1,0 +1,12 @@
+---
+apiVersion: certificates.k8s.io/v1
+kind: CertificateSigningRequest
+metadata:
+  name: saujan
+spec:
+  groups:
+    - system:authenticated
+  request: <paste the base64 decode key file >
+  signerName: kubernetes.io/kube-apiserer-client
+  usages:
+    - client auth
